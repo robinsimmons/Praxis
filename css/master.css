@@ -1,5 +1,48 @@
-/* HTML5 Legacy Fixes */
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
+@font-face {
+	/* This declaration targets Internet Explorer */
+	font-family: 'FranchiseRegular';
+	src: url('../fonts/franchise-bold-webfont.eot');
+}
+
+@font-face {
+	/* This declaration targets everything else */
+	font-family: 'FranchiseRegular';
+	src: url(//:) format('no404'), url('../fonts/franchise-bold-webfont.woff') format('woff'), url('../fonts/franchise-bold-webfont.ttf') format('truetype'), url('../fonts/franchise-bold-webfont.svg#webfontlrL9Pjkf') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Global Styles */
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+/* Global Classes */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.hidden {
+	display: none;
+}
+
+/* Headers */
+h1 {
+	font-family: 'FranchiseRegular', Verdana, Arial, sans-serif;
+	color: #000;
+	font-size:90px;
+	letter-spacing: 4px;
 }
