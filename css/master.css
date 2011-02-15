@@ -12,6 +12,15 @@
 	font-style: normal;
 }
 
+@font-face {
+    font-family: 'LaPresseRegular';
+    src: url('lapresse-webfont.eot?') format('eot'),
+         url('lapresse-webfont.woff') format('woff'),
+         url('lapresse-webfont.ttf') format('truetype'),
+         url('lapresse-webfont.svg#webfontlTHdnCrW') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Global Styles */
 
