@@ -38,6 +38,21 @@
 				$('#join-listing').show();
 			});
 			
+			/* form growth */
+			
+			$('#short').focus(function(){
+				$('#at-length').show();
+			});
+			
+			$('#length').focus(function(){
+				$('#namefield').show();
+				$('#emailfield').show();
+			});
+			
+			$('#email').focus(function(){
+				$('#buttons').show();
+			});
+			
 		});
 	</script>
 	
@@ -85,9 +100,13 @@
 	.sj-tab {
 		float:left;
 		width:100px;
-		padding:20px;
+		padding:0px;
 		margin-left: 20px;
-		border: 1px solid #000;
+	}
+	.sj-tab-inner {
+		float:left;
+		width:100px;
+		padding-left:21px;
 	}
 	
 	
@@ -102,6 +121,10 @@
 	label {
 		float: left;
 	}
+	
+	.formfield {
+		margin-bottom:20px;
+	}
 	.form-button {
 		float:left;
 		width:100px;
@@ -110,12 +133,37 @@
 		border: 1px solid #000;
 	}
 	
-	
+	/* Corners */
+	.top-left, .top-right, .bottom-right, .bottom-left {
+		height:12px;
+		width:12px;
+	}
+	.top-left {
+		border-top:5px solid #000;
+		border-left:5px solid #000;
+		float: left;
+	}
+	.top-right {
+		border-top: 5px solid #000;
+		border-right: 5px solid #000;
+		float: right;
+	}
+	.bottom-left {
+		border-bottom:5px solid #000;
+		border-left:5px solid #000;
+		float: left;
+	}
+	.bottom-right {
+		border-bottom: 5px solid #000;
+		border-right: 5px solid #000;
+		float: right;
+	}
 	</style>
 </head>
 <body>
-	<div id="wrapper">
-		
+	
+<div id="wrapper" class="clearfix">
+	<div id="bgwrapper">
 		
 <!-- logo and navigation -->
 
@@ -142,7 +190,15 @@
 			<div id="sj-wrapper" class="clearfix">
 				<div id="start-join">
 					<div id="start" class="sj-tab">
-						Start
+						<div class="top-left"></div>
+						<div class="top-right"></div>
+						
+						<div class="sj-tab-inner">
+							start
+						</div>
+						
+						<div class="bottom-left"></div>
+						<div class="bottom-right"></div>
 					</div>
 					<div id="join" class="sj-tab">
 						Join
@@ -172,27 +228,27 @@
 				<div id="start-form" class="clearfix hidden">
 					<form action="mailto:projects@praxissf.com" method="post" accept-charset="utf-8">
 						<div id="form-fields">
-							
-							<p id="in-short" class="hidden">
-								<label for="short">In Short:</label><input type="text" name="short" value="" id="short" class="hidden"/>
-							</p>
-							<p id="at-length" class="hidden">
-								<label for="length">At Length:</label><textarea name="length" rows="8" cols="40" class="hidden"></textarea>
-							</p>
-							<p>
-								<label for="name" class="hidden">Name:</label><input type="text" name="name" value="" id="name" class="hidden">
-							</p>
-							<p>
-								<label for="email" class="hidden">Email:</label><input type="text" name="email" value="" id="email" class="hidden">
-							</p>	
+							<div id="in-short" class="hidden formfield">
+									<label for="short">In Short:</label><input type="text" name="short" value="" id="short" />
+							</div>
+							<div id="at-length" class="hidden formfield">
+								<label for="length">At Length:</label><textarea name="length" rows="8" cols="40" id="length"></textarea>
+							</div>
+							<div id="namefield" class="hidden formfield">
+								<label for="name">Name:</label><input type="text" name="name" value="" id="name">
+							</div>
+							<div id="emailfield" class="hidden formfield">
+								<label for="email">Email:</label><input type="text" name="email" value="" id="email">
+							</div>	
 								
 						</div>
-						
-						<div class="form-button">
-							<a href="#">Tell us More</a>
-						</div>
-						<div class="form-button">
-							<input type="submit" value="Submit &rarr;">
+						<div id="buttons" class="hidden">
+							<div class="form-button">
+								<a href="#">Tell us More</a>
+							</div>
+							<div class="form-button">
+								<input type="submit" value="Submit">
+							</div>
 						</div>
 					</form>
 				</div>
@@ -211,8 +267,8 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	
+</div>
 </body>
 </html>
